@@ -26,5 +26,13 @@ function readLine() {
 }
 
 function main() {
-	console.log('Hello World');
+	const [n,k]= readLine().split(' ');
+	const marks= readLine().split(' ');
+	let count = 0;
+	for (const mark of marks) {
+		if(parseInt(mark)>=parseInt(marks[k-1]) && parseInt(mark)>0){
+			count++;
+		}
+	}
+	console.log(count)
 }
