@@ -27,12 +27,12 @@ function readLine() {
 
 function main() {
 	const number = parseInt(readLine());
-	const string = readLine().split(' ').map(Number);
-	let count = 0;
-	for (let i = 0; i < string.length; i++) {
-		if (string[i] < string[i + 1]) {
-			[string[i - 1], string[i]] = [string[i], string[i - 1]];
-			count++;
-		}
+	const x = readLine().split(' ').map(Number).slice(1);
+	const y = readLine().split(' ').map(Number).slice(1);
+	const all = [...new Set([...x, ...y])].sort((a, b) => a - b);
+	if (all.length === number && all[all.length - 1] === number) {
+		console.log('I become the guy.');
+	} else {
+		console.log('Oh, my keyboard!');
 	}
 }

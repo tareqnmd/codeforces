@@ -26,13 +26,7 @@ function readLine() {
 }
 
 function main() {
-	const number = parseInt(readLine());
-	const string = readLine().split(' ').map(Number);
-	let count = 0;
-	for (let i = 0; i < string.length; i++) {
-		if (string[i] < string[i + 1]) {
-			[string[i - 1], string[i]] = [string[i], string[i - 1]];
-			count++;
-		}
-	}
+	const string = readLine().replace(/WUB/g, ' ').trim();
+	console.log(string.replace(/ +(?= )/g,''));
 }
+

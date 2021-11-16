@@ -26,13 +26,24 @@ function readLine() {
 }
 
 function main() {
-	const number = parseInt(readLine());
-	const string = readLine().split(' ').map(Number);
+	const k = parseInt(readLine());
+	const l = parseInt(readLine());
+	const m = parseInt(readLine());
+	const n = parseInt(readLine());
+	const d = parseInt(readLine());
+
 	let count = 0;
-	for (let i = 0; i < string.length; i++) {
-		if (string[i] < string[i + 1]) {
-			[string[i - 1], string[i]] = [string[i], string[i - 1]];
-			count++;
+
+	if (k === 1 || l === 1 || m === 1 || n === 1) {
+		count = d;
+	} else {
+		for (let i = 1; i <= d; i++) {
+			if (i % k === 0 || i % l === 0 ||  i % m === 0 || i % n === 0) {
+				count++;
+			}
 		}
 	}
+
+	console.log(count);
 }
+
