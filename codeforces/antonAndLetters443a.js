@@ -26,6 +26,6 @@ function readLine() {
 }
 
 function main() {
-	const set = readLine();
-	console.log(set);
+	const set = readLine().replace(/,+/g, '').replace(/ +/g, '').slice(1,-1).split('');
+	console.log(new Set(set).size);
 }

@@ -26,6 +26,23 @@ function readLine() {
 }
 
 function main() {
-	const set = readLine();
-	console.log(set);
+	const number = parseInt(readLine());
+	for (let i = 0; i < number; i++) {
+		const arr = readLine().split(' ').map(Number);
+		const a = arr[0];
+		while (true) {
+			if (arr[0] < arr[1]) {
+				console.log(arr[1] - arr[0]);
+				break;
+			} else {
+
+				if(arr[0]%arr[1]===0){
+					console.log(0);
+					break;
+				}
+				console.log(arr[1]-(arr[0]%arr[1]));
+				break;
+			}
+		}
+	}
 }
