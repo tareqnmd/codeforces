@@ -1,5 +1,5 @@
 function main() {
-	console.log('main called');
+	console.log('main')
 }
 
 main();

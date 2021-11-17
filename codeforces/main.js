@@ -26,6 +26,6 @@ function readLine() {
 }
 
 function main() {
-	const set = readLine();
-	console.log(set);
+	const input = readLine();
+	console.log(input);
 }
