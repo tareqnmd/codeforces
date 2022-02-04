@@ -1,0 +1,5 @@
+{
+	"scripts": {
+		"start": "cat input.txt | node test.js"
+	}
+}
