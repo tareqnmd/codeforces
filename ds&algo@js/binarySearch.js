@@ -14,7 +14,7 @@ const binarySearch = (array, left, right, number) => {
 };
 
 const binarySearchRecursive = (array, left, right, number) => {
-	while (left <= right) {
+	if (left <= right) {
 		let mid = parseInt((left + right) / 2);
 		if (array[mid] === number) {
 			return mid;
@@ -33,7 +33,9 @@ function main() {
 	const number = 33;
 	const length = array.length;
 	const result = binarySearch(array, 0, length - 1, number);
-	result !== -1 ? console.log(`${number} found at index ${result}`) : console.log(`${number} not found`);
+	result !== -1
+		? console.log(`${number} found at index ${result}`)
+		: console.log(`${number} not found`);
 }
 
 main();
